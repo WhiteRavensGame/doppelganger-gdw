@@ -18,7 +18,7 @@ public class ChangeDoppelgangerForm : MonoBehaviour
 	public Material[] p2Materials;
 	public Material[] p3Materials;
 	public Material[] doppelgangerMaterials;
-
+	public Material[] invisibleMaterials;
 	
 	void Start ()
 	{
@@ -43,6 +43,11 @@ public class ChangeDoppelgangerForm : MonoBehaviour
 	public void SwitchToDP()
 	{
 		smr.materials = doppelgangerMaterials;
+		smr.sharedMesh = doppelgangerMesh;
+	}
+	public void SwitchToInvisible()
+	{
+		smr.materials = invisibleMaterials;
 		smr.sharedMesh = doppelgangerMesh;
 	}
 
